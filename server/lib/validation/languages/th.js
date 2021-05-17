@@ -50,7 +50,7 @@ const STRUCTURE_REGEX = new RegExp(''
   + /\u0E4E{2,}|/  // no repeat: Yamakkan
   + /[\u0E40\u0E41\u0E42\u0E43\u0E44\u0E30\u0E32\u0E33\u0E45][\u0E48\u0E49\u0E4A\u0E4B\u0E3A\u0E4C\u0E4D\u0E4E]|/  // invalid sequence: symbols after lead/follow vowels
   + /[\u0E48\u0E49\u0E4A\u0E4B\u0E3A\u0E4C\u0E4D\u0E4E][\u0E31\u0E34\u0E35\u0E36\u0E37\u0E4D\u0E47\u0E38\u0E39]|/  // invalid sequence: symbols before above/below vowels
-  + /[ก-ฮ]{5,}/  // no repeat: 5 or more consonants in a row
+  + /(.)\1{6,}/  // no repeat: 7 or more same characters in a row
 );
 
 // These Thai chars cannot start the word:
